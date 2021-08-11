@@ -14,7 +14,7 @@ export function mostrarAlerta(msg){
         formulario.appendChild(mensajeDiv);
 
         setTimeout(() =>{
-            alerta.remove();
+            mensajeDiv.remove();
         }, 3000);
     }
 
