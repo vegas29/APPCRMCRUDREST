@@ -1,6 +1,11 @@
 {
   "clientes": [
     {
+      "nombre": "Alejandro",
+      "email": "diegoleandro-29@hotmail.com",
+      "telefono": "3212365218",
+      "empresa": "Tomorrowland",
+      "id": 27
     }
   ]
 }
