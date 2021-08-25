@@ -1,4 +1,4 @@
-import {obtenerCliente, editarCliente } from './API.js';
+import { obtenerCliente, editarCliente } from './API.js';
 import { mostrarAlerta } from './funciones.js';
 
 (function() {
@@ -18,7 +18,7 @@ import { mostrarAlerta } from './funciones.js';
         const cliente = await obtenerCliente(idCliente)
         mostrarCliente(cliente);
        
-        // registra el formulario
+        
         const formulario = document.querySelector('#formulario');
         formulario.addEventListener('submit', validarCliente);
        

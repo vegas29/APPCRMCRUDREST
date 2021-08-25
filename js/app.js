@@ -12,8 +12,9 @@ import { obtenerClientes, eliminarCliente } from './API.js';
         
         clientes.forEach( cliente => {
             const { nombre, email, telefono, empresa, id } = cliente;
-            const row = document.createElement('tr');
+            const row = document.createElement('TR');
 
+            //Generando el tr con scripting
             row.innerHTML += `
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                     <p class="text-sm leading-5 font-medium text-gray-700 text-lg  font-bold"> ${nombre} </p>
@@ -34,6 +35,8 @@ import { obtenerClientes, eliminarCliente } from './API.js';
             listado.appendChild(row);
         })
     }
+
+    //Funcion para confirmar la eliminacion de un registro con el modal nativo de JS
 
    async function confirmarEliminar(e) {
         if( e.target.classList.contains('eliminar') ) {

@@ -1,12 +1,13 @@
 const url = "http://localhost:4000/clientes";
 
+//Funcion para agregar un nuevo cliente
 export const nuevoCliente = async cliente => {
     try {
         await fetch(url, {
             method: 'POST', 
-            body: JSON.stringify(cliente), // data puede ser string o un objeto
+            body: JSON.stringify(cliente), // La data puede ser un string o objeto
             headers:{
-              'Content-Type': 'application/json' // Y le decimos que los datos se enviaran como JSON
+              'Content-Type': 'application/json' // Le decimos como se enviara la informacion
             }
         });
     } catch (error) {
@@ -14,6 +15,7 @@ export const nuevoCliente = async cliente => {
     }
 }
 
+// Funcion para obtener los clientes
 export const obtenerClientes = async () => {
     try {
         const resultado = await fetch(url);
@@ -24,6 +26,7 @@ export const obtenerClientes = async () => {
     }
 }
 
+//Funcion para obtener un cliente en especifico segun su id
 export const obtenerCliente = async id => {
     try {
         const resultado = await fetch(`${url}/${id}`);
@@ -34,6 +37,7 @@ export const obtenerCliente = async id => {
     }
 }
 
+//Funcion para eliminar un cliente
 
 export const editarCliente = async cliente => {
     try {
